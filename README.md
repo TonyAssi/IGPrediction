@@ -2,7 +2,7 @@
 
 by [Tony Assi](https://www.tonyassi.com/)
 
-Predict Instagram likes of an image using image regression. The framework takes care of the scraping, model training, and inference.
+Predict Instagram likes of an image using image regression. The framework takes care of the scraping, model training, and inference. *Photos only.*
 
 Built with PyTorch, 🤗 Transformers, and [Image Regression Trainer](https://github.com/TonyAssi/ImageRegression).
 
