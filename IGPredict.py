@@ -7,12 +7,12 @@ from datasets import load_dataset
 import ImageRegression
 
 
-def ig_download(num_images):
+def ig_download(username, num_images):
     # Initialize Instaloader
     L = instaloader.Instaloader()
 
     # Load the profile
-    profile = instaloader.Profile.from_username(L.context, 'tony__assi')
+    profile = instaloader.Profile.from_username(L.context, username)
 
     # Create directories to store the downloaded and final copied posts
     download_dir = 'downloaded_posts'
