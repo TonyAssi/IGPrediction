@@ -4,7 +4,7 @@ by [Tony Assi](https://www.tonyassi.com/)
 
 Predict Instagram likes of an image using image regression. The framework takes care of the scraping, model training, and inference.
 
-Image Regression model training fine-tunes [google/vit-base-patch16-224](https://huggingface.co/google/vit-base-patch16-224) with a custom PyTorch model that takes an image as input and outputs the predicted number of likes. Built with PyTorch, 🤗 Transformers, and [Image Regression Trainer](https://github.com/TonyAssi/ImageRegression).
+Built with PyTorch, 🤗 Transformers, and [Image Regression Trainer](https://github.com/TonyAssi/ImageRegression).
 
 ## Download
 ```bash
