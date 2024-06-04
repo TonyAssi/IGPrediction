@@ -1,8 +1,8 @@
 # IG Prediction
 
-![diagram2](https://github.com/TonyAssi/ImageRegression/assets/42156881/650a6b86-4d40-4bd0-b8e8-fa1e0e89388e)
-
 by [Tony Assi](https://www.tonyassi.com/)
+
+Predict Instagram likes of an image using image regression. This framework downloads images/likes from Instagram, uploads them as a 🤗 dataset, trains an image regression model, uploads the model, and inference.
 
 Image Regression model training and inference. The trainer fine-tunes [google/vit-base-patch16-224](https://huggingface.co/google/vit-base-patch16-224) with a custom PyTorch model that takes an image as input and outputs a number. You can upload the model to 🤗 Hub and use a simple predict function for inference. Built with 🤗 and PyTorch.
 
