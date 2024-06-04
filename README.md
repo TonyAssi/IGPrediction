@@ -25,7 +25,7 @@ from IGPredict import ig_download, upload_dataset, train_ig_model, upload_ig_mod
 ```
 
 ### Download Instagram Images
-
+Download Instagram images and likes to *'./images'* folder using [Instaloader](https://github.com/instaloader/instaloader).
 - **username** Instagram username
 - **num_images** maximum number of images to download
 ```python
