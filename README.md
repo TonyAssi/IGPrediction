@@ -24,6 +24,12 @@ pip install -r requirements.txt
 from IGPredict import ig_download, upload_dataset, train_ig_model, upload_ig_model, predict_ig
 ```
 
+### Download Instagram Images
+
+```python
+
+```
+
 ### Train Model
 - **dataset_id** 🤗 dataset id (see [Dataset](https://github.com/TonyAssi/ImageRegression?tab=readme-ov-file#dataset))
 - **value_column_name** column name of prediction values in dataset
