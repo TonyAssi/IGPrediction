@@ -9,7 +9,7 @@ Image Regression model training fine-tunes [google/vit-base-patch16-224](https:/
 ## Download
 ```bash
 git clone https://github.com/TonyAssi/IGPrediction.git
-cd ImageRegression
+cd IGPrediction
 ```
 
 ## Installation
