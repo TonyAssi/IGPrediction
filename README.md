@@ -75,7 +75,7 @@ Go to your 🤗 profile to find your uploaded model, it should look similar to [
 - **image_path** path to image
 ```python
 predicted_likes = predict_ig(repo_id='tonyassi/tony__assi-ig-prediction',
-                             image_path='images.jpg')
+                             image_path='image.jpg')
 print(predicted_likes)
 ```
 The first time this function is called it'll download the safetensor model. Subsequent function calls will run faster.
