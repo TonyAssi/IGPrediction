@@ -25,12 +25,13 @@ from IGPredict import ig_download, upload_dataset, train_ig_model, upload_ig_mod
 ```
 
 ### Download Instagram Images
-Download Instagram images and likes to *'./images'* folder using [Instaloader](https://github.com/instaloader/instaloader).
 - **username** Instagram username
 - **num_images** maximum number of images to download
 ```python
 ig_download(username='tony__assi', num_images=100)
 ```
+Instagram images will be downloaded to *'./images'* folder, each one named like so *"index-likes.jpg"*. E.g. *"3-17.jpg"* is the third image and has 17 likes.
+
 
 ### Train Model
 - **dataset_id** 🤗 dataset id (see [Dataset](https://github.com/TonyAssi/ImageRegression?tab=readme-ov-file#dataset))
