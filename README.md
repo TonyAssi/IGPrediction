@@ -68,7 +68,7 @@ upload_ig_model(model_id='tony__assi-ig-prediction',
                 token='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',
                 checkpoint_dir='./results/checkpoint-100')
 ```
-Go to your 🤗 profile to find your uploaded model, it should look similar to [tonyassi/sales-prediction](https://huggingface.co/tonyassi/sales-prediction).
+Go to your 🤗 profile to find your uploaded model, it should look similar to [tonyassi/tony__assi-ig-prediction](https://huggingface.co/tonyassi/tony__assi-ig-prediction).
 
 ### Inference (Prediction)
 - **repo_id** 🤗 repo id of the model
