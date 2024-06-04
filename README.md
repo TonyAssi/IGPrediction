@@ -38,6 +38,7 @@ Instagram images will be downloaded to *'./images'* folder, each one named like 
 ```python
 upload_dataset(dataset_name='tony__assi-ig-ds', token='YOUR_HF_TOKEN')
 ```
+Go to your  🤗 profile to find your uploaded dataset, it should look similar to [tonyassi/tony__assi-ig-ds](https://huggingface.co/datasets/tonyassi/tony__assi-ig-ds).
 
 ### Train Model
 - **dataset_id** 🤗 dataset id (see [Dataset](https://github.com/TonyAssi/ImageRegression?tab=readme-ov-file#dataset))
