@@ -45,25 +45,18 @@ Go to your  🤗 profile to find your uploaded dataset, it should look similar t
 ```python
 train_ig_model('tonyassi/tony__assi-ig-ds')
 ```
-
-
-
-- **dataset_id** 🤗 dataset id (see [Dataset](https://github.com/TonyAssi/ImageRegression?tab=readme-ov-file#dataset))
-- **value_column_name** column name of prediction values in dataset
+You can also set the training parameters:
+- **dataset_id** 🤗 dataset id
 - **test_split** test split of the train/test split
-- **output_dir** the directory where the checkpoints will be saved
 - **num_train_epochs** training epochs
 - **learning_rate** learning rate
 ```python
-train_model(dataset_id='tonyassi/clothing-sales-ds',
-            value_column_name='sales',
-            test_split=0.2,
-            output_dir='./results',
-            num_train_epochs=10,
-            learning_rate=1e-4)
-
+train_ig_model(dataset_id='tonyassi/tony__assi-ig-ds',
+               test_split=0.2,
+               num_train_epochs=10,
+               learning_rate=1e-4)
 ```
-The trainer will save the checkpoints in the output_dir location. The model.safetensors are the trained weights you'll use for inference (predicton).
+The trainer will save the checkpoints in the *"results"* folder. The model.safetensors are the trained weights you'll use for inference (predicton).
 
 ### Upload Model
 This function will upload your model to the 🤗 Hub, which will be useful for inference.
