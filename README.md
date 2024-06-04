@@ -74,13 +74,8 @@ Go to your 🤗 profile to find your uploaded model, it should look similar to [
 - **repo_id** 🤗 repo id of the model
 - **image_path** path to image
 ```python
-predict(repo_id='tonyassi/sales-prediction',
-        image_path='image.jpg')
+predicted_likes = predict_ig(repo_id='tonyassi/tony__assi-ig-prediction', image_path='images.jpg')
 ```
 The first time this function is called it'll download the safetensor model. Subsequent function calls will run faster.
 
-## Dataset
 
-The model trainer takes a 🤗 dataset id as input so your dataset must be uploaded to 🤗. It should have a column of images and a column of values (floats or ints). Check out [Create an image dataset](https://huggingface.co/docs/datasets/en/image_dataset) if you need help creating a 🤗 dataset. Your dataset should look like [tonyassi/clothing-sales-ds](https://huggingface.co/datasets/tonyassi/clothing-sales-ds) (the values column can be named whatever you'd like).
-
-<img width="868" alt="Screenshot 2024-05-18 at 12 11 32 PM" src="https://github.com/TonyAssi/ImageRegression/assets/42156881/06ed6954-de6f-45ab-84a3-57781d39722b">
