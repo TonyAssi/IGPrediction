@@ -33,9 +33,10 @@ ig_download(username='tony__assi', num_images=100)
 Instagram images will be downloaded to *'./images'* folder, each one named like so *"index-likes.jpg"*. E.g. *"3-17.jpg"* is the third image and has 17 likes.
 
 ### Upload Dataset
-
+- **dataset_name** name of dataset to be uploaded
+- **token** go [here](https://huggingface.co/settings/tokens) to create a new 🤗 token
 ```python
-upload_dataset(dataset_name='ig2', token='YOUR_HF_TOKEN')
+upload_dataset(dataset_name='tony__assi-ig-ds', token='YOUR_HF_TOKEN')
 ```
 
 ### Train Model
