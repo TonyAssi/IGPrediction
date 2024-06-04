@@ -164,9 +164,8 @@ def upload_model(model_id, token, checkpoint_dir):
     updated_readme_content = readme_content.replace('- \"-\"', f'- \"{metadata.get("dataset_id", "")}\"')
     updated_readme_content = updated_readme_content.replace('- name: "-"', f'- name: \"{model_id}\"')
     updated_readme_content = updated_readme_content.replace('# Title', f'# {model_id}')
-    updated_readme_content = updated_readme_content.replace("repo_id='-'", f"repo_id=\'{repo_id}\'")
+    updated_readme_content = updated_readme_content.replace("dataset_name='-'", f"dataset_name=\'{metadata.get('dataset_id', '')}\'")
     updated_readme_content = updated_readme_content.replace("Dataset:", f"Dataset: {metadata.get('dataset_id', '')}")
-    updated_readme_content = updated_readme_content.replace("Value Column:", f"Value Column: \'{metadata.get('value_column_name', '')}\'")
     updated_readme_content = updated_readme_content.replace("Train Test Split:", f"Train Test Split: {metadata.get('test_split', '')}")
     updated_readme_content = updated_readme_content.replace("Epochs:", f"Epochs: {metadata.get('num_train_epochs', '')}")
     updated_readme_content = updated_readme_content.replace("Learning Rate:", f"Learning Rate: {metadata.get('learning_rate', '')}")
@@ -176,6 +175,7 @@ def upload_model(model_id, token, checkpoint_dir):
     updated_readme_content = updated_readme_content.replace("num_train_epochs=-", f"num_train_epochs={metadata.get('num_train_epochs', '')}")
     updated_readme_content = updated_readme_content.replace("learning_rate=-", f"learning_rate={metadata.get('learning_rate', '')}")
     updated_readme_content = updated_readme_content.replace("model_id='-'", f"model_id=\'{model_id}\'")
+    updated_readme_content = updated_readme_content.replace("repo_id='-'", f"repo_id=\'{repo_id}\'")
 
 
     # Write the updated content back to README.md file

@@ -18,8 +18,8 @@ model-index:
 This model was trained with [IGPrediction](https://github.com/TonyAssi/IGPrediction). It predicts how many likes an image will get.
 
 ```python
-from ImageRegression import predict
-predict(repo_id='-',image_path='image.jpg')
+from IGPredict import predict_ig
+predict_ig(repo_id='-',image_path='image.jpg')
 ```
 
 ---
@@ -42,8 +42,8 @@ Learning Rate:
 
 ### Download
 ```bash
-git clone https://github.com/TonyAssi/ImageRegression.git
-cd ImageRegression
+git clone https://github.com/TonyAssi/IGPrediction.git
+cd IGPrediction
 ```
 
 ### Installation
@@ -53,35 +53,39 @@ pip install -r requirements.txt
 
 ### Import 
 ```python
-from ImageRegression import train_model, upload_model, predict
+from IGPredict import ig_download, upload_dataset, train_ig_model, upload_ig_model, predict_ig
 ```
 
-### Inference (Prediction)
-- **repo_id** 🤗 repo id of the model
-- **image_path** path to image
+### Download Instagram Images
+- **username** Instagram username
+- **num_images** maximum number of images to download
 ```python
-predict(repo_id='-',
-        image_path='image.jpg')
+ig_download(username='instagarm_username', num_images=100)
 ```
-The first time this function is called it'll download the safetensor model. Subsequent function calls will run faster.
+Instagram images will be downloaded to *'./images'* folder, each one named like so *"index-likes.jpg"*. E.g. *"3-17.jpg"* is the third image and has 17 likes.
+
+### Upload Dataset
+- **dataset_name** name of dataset to be uploaded
+- **token** go [here](https://huggingface.co/settings/tokens) to create a new 🤗 token
+```python
+upload_dataset(dataset_name='-', token='YOUR_HF_TOKEN')
+```
+Go to your  🤗 profile to find your uploaded dataset, it should look similar to [tonyassi/tony__assi-ig-ds](https://huggingface.co/datasets/tonyassi/tony__assi-ig-ds).
+
 
 ### Train Model
 - **dataset_id** 🤗 dataset id
-- **value_column_name** column name of prediction values in dataset
 - **test_split** test split of the train/test split
-- **output_dir** the directory where the checkpoints will be saved
 - **num_train_epochs** training epochs
 - **learning_rate** learning rate
 ```python
-train_model(dataset_id='-',
-            value_column_name='-',
-            test_split=-,
-            output_dir='./results',
-            num_train_epochs=-,
-            learning_rate=-)
+train_ig_model(dataset_id='-',
+               test_split=-,
+               num_train_epochs=-,
+               learning_rate=-)
 
 ```
-The trainer will save the checkpoints in the output_dir location. The model.safetensors are the trained weights you'll use for inference (predicton).
+The trainer will save the checkpoints in the 'results' folder. The model.safetensors are the trained weights you'll use for inference (predicton).
 
 ### Upload Model
 This function will upload your model to the 🤗 Hub.
@@ -89,7 +93,16 @@ This function will upload your model to the 🤗 Hub.
 - **token** go [here](https://huggingface.co/settings/tokens) to create a new 🤗 token
 - **checkpoint_dir** checkpoint folder that will be uploaded
 ```python
-upload_model(model_id='-',
+upload_ig_model(model_id='-',
              token='YOUR_HF_TOKEN',
              checkpoint_dir='./results/checkpoint-940')
 ```
+
+### Inference (Prediction)
+- **repo_id** 🤗 repo id of the model
+- **image_path** path to image
+```python
+predict_ig(repo_id='-',
+        image_path='image.jpg')
+```
+The first time this function is called it'll download the safetensor model. Subsequent function calls will run faster.
