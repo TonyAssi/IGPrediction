@@ -26,6 +26,8 @@ from IGPredict import ig_download, upload_dataset, train_ig_model, upload_ig_mod
 
 ### Download Instagram Images
 
+- **username** Instagram username
+- **num_images** maximum number of images to download
 ```python
 ig_download(username='tony__assi', num_images=100)
 ```
