@@ -1,0 +1,7 @@
+instaloader
+datasets
+pillow
+torch
+transformers
+torchvision
+accelerate
