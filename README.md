@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ### Import 
 ```python
-from ImageRegression import train_model, upload_model, predict
+from IGPredict import ig_download, upload_dataset, train_ig_model, upload_ig_model, predict_ig
 ```
 
 ### Train Model
