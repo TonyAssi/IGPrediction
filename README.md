@@ -62,7 +62,7 @@ The trainer will save the checkpoints in the *"results"* folder. The model.safet
 This function will upload your model to the 🤗 Hub, which will be useful for inference.
 - **model_id** the name of the model id
 - **token** go [here](https://huggingface.co/settings/tokens) to create a new 🤗 token
-- **checkpoint_dir** checkpoint folder that will be uploaded
+- **checkpoint_dir** checkpoint folder that will be uploaded (located inside *"results"* folder)
 ```python
 upload_ig_model(model_id='tony__assi-ig-prediction',
                 token='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',
