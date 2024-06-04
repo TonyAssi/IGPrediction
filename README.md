@@ -64,9 +64,9 @@ This function will upload your model to the 🤗 Hub, which will be useful for i
 - **token** go [here](https://huggingface.co/settings/tokens) to create a new 🤗 token
 - **checkpoint_dir** checkpoint folder that will be uploaded
 ```python
-upload_model(model_id='sales-prediction',
-             token='YOUR_HF_TOKEN',
-             checkpoint_dir='./results/checkpoint-940')
+upload_ig_model(model_id='tony__assi-ig-prediction',
+                token='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',
+                checkpoint_dir='./results/checkpoint-100')
 ```
 Go to your 🤗 profile to find your uploaded model, it should look similar to [tonyassi/sales-prediction](https://huggingface.co/tonyassi/sales-prediction).
 
