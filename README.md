@@ -52,9 +52,9 @@ You can also set the training parameters:
 - **learning_rate** learning rate
 ```python
 train_ig_model(dataset_id='tonyassi/tony__assi-ig-ds',
-               test_split=0.2,
-               num_train_epochs=10,
-               learning_rate=1e-4)
+               test_split=0.2, # default
+               num_train_epochs=10, # default
+               learning_rate=1e-4) # default
 ```
 The trainer will save the checkpoints in the *"results"* folder. The model.safetensors are the trained weights you'll use for inference (predicton).
 
