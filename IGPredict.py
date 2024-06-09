@@ -34,6 +34,7 @@ def ig_download(username, num_images):
 
         # Determine the filename
         likes = post.likes
+        if(likes == -1): likes=1 # If the instagram account hides likes then likes will be -1
         extension = '.mp4' if post.is_video else '.jpg'
         custom_filename = f"{num_downloaded_images}-{likes}{extension}"
         custom_path = os.path.join(download_dir, custom_filename)
